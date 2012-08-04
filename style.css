@@ -182,6 +182,10 @@ body {
 	text-shadow: none;
 }
 
+.slide span.heart {
+	color: red;
+}
+
 .slide pre .Type { color: #b58900; }
 .slide pre .Constant { color: #2aa198; }
 .slide pre .Identifier { color: #268bd2; }
