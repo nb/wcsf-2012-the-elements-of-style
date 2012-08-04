@@ -16,12 +16,12 @@
     <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
 </div>
 
-<div id="impress" data-transition-duration="500">
+<div id="impress" data-transition-duration="1000">
 
 	<!-- C -->
 
-	<div class="slide step" data-x="900" data-y="0">
-		<h1>baba</h1>
+	<div id="title" class="slide step" data-x="900" data-y="0">
+		<h1>Selected Pieces of<br />&ldquo;The Elements of Style&rdquo; translated to code</h1>
 	</div>
 
 	<div class="slide step" data-x="0" data-y="700" data-exclude="true" data-rotate="0">
@@ -38,12 +38,12 @@
 
 	<!-- A -->
 
-	<div class="slide step" data-x="2700" data-y="0" data-exclude="true">
-		&nbsp;
+	<div class="slide step" data-x="2700" data-y="0">
+		<h2>We ♥ analogies</h2>
 	</div>
 
-	<div class="slide step" data-x="3600" data-y="0" data-exclude="true">
-		&nbsp;
+	<div class="slide step" data-x="3600" data-y="0">
+		<h2>Programming &amp; Writing</h2>
 	</div>
 
 	<div class="slide step half" data-x="2475" data-y="700" data-exclude="true">
@@ -54,8 +54,8 @@
 		&nbsp;
 	</div>
 
-	<div class="slide step" data-x="2700" data-y="1400" data-exclude="true">
-		&nbsp;
+	<div class="slide step" data-x="2700" data-y="1400">
+		<h2>Strunk &amp; White<br />vs.<br />WordPress</h2>
 	</div>
 
 	<div class="slide step" data-x="3600" data-y="1400" data-exclude="true">
@@ -76,8 +76,8 @@
 		&nbsp;
 	</div>
 
-	<div class="slide step" data-x="6300" data-y="0" data-exclude="true">
-		&nbsp;
+	<div class="slide step" data-x="6300" data-y="0">
+		<h2>0. Place the emphatetic words of a sentence in the&nbsp;end</h2>
 	</div>
 
 	<div class="slide step half" data-x="5175" data-y="700" data-exclude="true">
@@ -88,8 +88,20 @@
 		&nbsp;
 	</div>
 
-	<div class="slide step" data-x="5400" data-y="1400" data-exclude="true">
-		&nbsp;
+	<div class="slide step" data-x="5400" data-y="1400">
+<pre>
+<span class="PreProc">function</span> set_post_thumbnail<span class="Special">(</span> <span class="Statement">$</span><span class="Identifier">post</span>, <span class="Statement">$</span><span class="Identifier">thumbnail_id</span> <span class="Special">)</span> <span class="Special">{</span>
+    <span class="Statement">$</span><span class="Identifier">post</span> <span class="Statement">=</span> get_post<span class="Special">(</span> <span class="Statement">$</span><span class="Identifier">post</span> <span class="Special">)</span>;
+    <span class="Statement">$</span><span class="Identifier">thumbnail_id</span> <span class="Statement">=</span> absint<span class="Special">(</span> <span class="Statement">$</span><span class="Identifier">thumbnail_id</span> <span class="Special">)</span>;
+    <span class="Statement">if</span> <span class="Special">(</span> <span class="Statement">$</span><span class="Identifier">post</span> <span class="Statement">&amp;&amp;</span> <span class="Statement">$</span><span class="Identifier">thumbnail_id</span> <span class="Statement">&amp;&amp;</span> get_post<span class="Special">(</span> <span class="Statement">$</span><span class="Identifier">thumbnail_id</span> <span class="Special">)</span> <span class="Special">)</span> <span class="Special">{</span>
+        <span class="Statement">$</span><span class="Identifier">thumbnail_html</span> <span class="Statement">=</span> wp_get_attachment_image<span class="Special">(</span> <span class="Statement">$</span><span class="Identifier">thumbnail_id</span>, '<span class="Constant">thumbnail</span>' <span class="Special">)</span>;
+        <span class="Statement">if</span> <span class="Special">(</span> <span class="Statement">!</span> <span class="Statement">empty</span><span class="Special">(</span> <span class="Statement">$</span><span class="Identifier">thumbnail_html</span> <span class="Special">)</span> <span class="Special">)</span> <span class="Special">{</span>
+            <span class="Statement">return</span> update_post_meta<span class="Special">(</span> <span class="Statement">$</span><span class="Identifier">post</span><span class="Type">-&gt;</span>ID, '<span class="Constant">_thumbnail_id</span>', <span class="Statement">$</span><span class="Identifier">thumbnail_id</span> <span class="Special">)</span>;
+        <span class="Special">}</span>
+    <span class="Special">}</span>
+    <span class="Statement">return</span> <span class="Constant">false</span>;
+<span class="Special">}</span>
+</pre>
 	</div>
 
 	<div class="slide step" data-x="6300" data-y="1400" data-exclude="true">
@@ -110,8 +122,20 @@
 		&nbsp;
 	</div>
 
-	<div class="slide step" data-x="9000" data-y="0" data-exclude="true">
-		&nbsp;
+	<div class="slide step high-code" data-x="9000" data-y="0">
+<pre>
+<em><span class="PreProc">function</span> set_post_thumbnail<span class="Special">(</span> <span class="Statement">$</span><span class="Identifier">post</span>, <span class="Statement">$</span><span class="Identifier">thumbnail_id</span> <span class="Special">)</span> <span class="Special">{</span></em>
+    <span class="Statement">$</span><span class="Identifier">post</span> <span class="Statement">=</span> get_post<span class="Special">(</span> <span class="Statement">$</span><span class="Identifier">post</span> <span class="Special">)</span>;
+    <span class="Statement">$</span><span class="Identifier">thumbnail_id</span> <span class="Statement">=</span> absint<span class="Special">(</span> <span class="Statement">$</span><span class="Identifier">thumbnail_id</span> <span class="Special">)</span>;
+    <span class="Statement">if</span> <span class="Special">(</span> <span class="Statement">$</span><span class="Identifier">post</span> <span class="Statement">&amp;&amp;</span> <span class="Statement">$</span><span class="Identifier">thumbnail_id</span> <span class="Statement">&amp;&amp;</span> get_post<span class="Special">(</span> <span class="Statement">$</span><span class="Identifier">thumbnail_id</span> <span class="Special">)</span> <span class="Special">)</span> <span class="Special">{</span>
+        <span class="Statement">$</span><span class="Identifier">thumbnail_html</span> <span class="Statement">=</span> wp_get_attachment_image<span class="Special">(</span> <span class="Statement">$</span><span class="Identifier">thumbnail_id</span>, '<span class="Constant">thumbnail</span>' <span class="Special">)</span>;
+        <span class="Statement">if</span> <span class="Special">(</span> <span class="Statement">!</span> <span class="Statement">empty</span><span class="Special">(</span> <span class="Statement">$</span><span class="Identifier">thumbnail_html</span> <span class="Special">)</span> <span class="Special">)</span> <span class="Special">{</span>
+            <span class="Statement">return</span> update_post_meta<span class="Special">(</span> <span class="Statement">$</span><span class="Identifier">post</span><span class="Type">-&gt;</span>ID, '<span class="Constant">_thumbnail_id</span>', <span class="Statement">$</span><span class="Identifier">thumbnail_id</span> <span class="Special">)</span>;
+        <span class="Special">}</span>
+    <span class="Special">}</span>
+<em>    <span class="Statement">return</span> <span class="Constant">false</span>;</em>
+<span class="Special">}</span>
+</pre>
 	</div>
 
 	<div class="slide step half" data-x="7875" data-y="700" data-exclude="true">
@@ -122,8 +146,20 @@
 		&nbsp;
 	</div>
 
-	<div class="slide step" data-x="8550" data-y="1050" data-exclude="true">
-		&nbsp;
+	<div class="slide step high-code" data-x="8550" data-y="1050">
+<pre>
+<em><span class="PreProc">function</span> set_post_thumbnail<span class="Special">(</span> <span class="Statement">$</span><span class="Identifier">post</span>, <span class="Statement">$</span><span class="Identifier">thumbnail_id</span> <span class="Special">)</span> <span class="Special">{</span></em>
+    <span class="Statement">$</span><span class="Identifier">post</span> <span class="Statement">=</span> get_post<span class="Special">(</span> <span class="Statement">$</span><span class="Identifier">post</span> <span class="Special">)</span>;
+    <span class="Statement">$</span><span class="Identifier">thumbnail_id</span> <span class="Statement">=</span> absint<span class="Special">(</span> <span class="Statement">$</span><span class="Identifier">thumbnail_id</span> <span class="Special">)</span>;
+    <span class="Statement">if</span> <span class="Special">(</span> <span class="Statement">$</span><span class="Identifier">post</span> <span class="Statement">&amp;&amp;</span> <span class="Statement">$</span><span class="Identifier">thumbnail_id</span> <span class="Statement">&amp;&amp;</span> get_post<span class="Special">(</span> <span class="Statement">$</span><span class="Identifier">thumbnail_id</span> <span class="Special">)</span> <span class="Special">)</span> <span class="Special">{</span>
+        <span class="Statement">$</span><span class="Identifier">thumbnail_html</span> <span class="Statement">=</span> wp_get_attachment_image<span class="Special">(</span> <span class="Statement">$</span><span class="Identifier">thumbnail_id</span>, '<span class="Constant">thumbnail</span>' <span class="Special">)</span>;
+        <span class="Statement">if</span> <span class="Special">(</span> <span class="Statement">!</span> <span class="Statement">empty</span><span class="Special">(</span> <span class="Statement">$</span><span class="Identifier">thumbnail_html</span> <span class="Special">)</span> <span class="Special">)</span> <span class="Special">{</span>
+<em>            <span class="Statement">return</span> update_post_meta<span class="Special">(</span> <span class="Statement">$</span><span class="Identifier">post</span><span class="Type">-&gt;</span>ID, '<span class="Constant">_thumbnail_id</span>', <span class="Statement">$</span><span class="Identifier">thumbnail_id</span> <span class="Special">)</span>;</em>
+        <span class="Special">}</span>
+    <span class="Special">}</span>
+    <span class="Statement">return</span> <span class="Constant">false</span>;
+<span class="Special">}</span>
+</pre>
 	</div>
 
 	<div class="slide step" data-x="8100" data-y="2100" data-exclude="true">
@@ -135,8 +171,24 @@
 	</div>
 
 	<!-- A -->
-	<div class="slide step" data-x="11700" data-y="0" data-exclude="true">
-		&nbsp;
+	<div class="slide step" data-x="11700" data-y="0">
+<pre>
+<span class="PreProc">function</span> set_post_thumbnail<span class="Special">(</span> <span class="Statement">$</span><span class="Identifier">post</span>, <span class="Statement">$</span><span class="Identifier">thumbnail_id</span> <span class="Special">)</span> <span class="Special">{</span>
+    <span class="Statement">$</span><span class="Identifier">post</span> <span class="Statement">=</span> get_post<span class="Special">(</span> <span class="Statement">$</span><span class="Identifier">post</span> <span class="Special">)</span>;
+    <span class="Statement">$</span><span class="Identifier">thumbnail_id</span> <span class="Statement">=</span> absint<span class="Special">(</span> <span class="Statement">$</span><span class="Identifier">thumbnail_id</span> <span class="Special">)</span>;
+
+    <span class="Statement">if</span> <span class="Special">(</span> <span class="Statement">!</span><span class="Statement">$</span><span class="Identifier">post</span> <span class="Statement">||</span> <span class="Statement">!</span><span class="Statement">$</span><span class="Identifier">thumbnail_id</span> <span class="Statement">||</span> <span class="Statement">!</span>get_post<span class="Special">(</span> <span class="Statement">$</span><span class="Identifier">thumbnail_id</span> <span class="Special">)</span> <span class="Special">)</span> <span class="Special">{</span>
+        <span class="Statement">return</span> <span class="Constant">false</span>;
+    <span class="Special">}</span>
+
+    <span class="Statement">$</span><span class="Identifier">thumbnail_html</span> <span class="Statement">=</span> wp_get_attachment_image<span class="Special">(</span> <span class="Statement">$</span><span class="Identifier">thumbnail_id</span>, '<span class="Constant">thumbnail</span>' <span class="Special">)</span>;
+    <span class="Statement">if</span> <span class="Special">(</span> <span class="Statement">empty</span><span class="Special">(</span> <span class="Statement">$</span><span class="Identifier">thumbnail_html</span> <span class="Special">)</span> <span class="Special">)</span> <span class="Special">{</span>
+        <span class="Statement">return</span> <span class="Constant">false</span>;
+    <span class="Special">}</span>
+
+    <span class="Statement">return</span> update_post_meta<span class="Special">(</span> <span class="Statement">$</span><span class="Identifier">post</span><span class="Type">-&gt;</span>ID, '<span class="Constant">_thumbnail_id</span>', <span class="Statement">$</span><span class="Identifier">thumbnail_id</span> <span class="Special">)</span>;
+<span class="Special">}</span>
+</pre>
 	</div>
 
 	<div class="slide step" data-x="12600" data-y="0" data-exclude="true">
@@ -151,12 +203,29 @@
 		&nbsp;
 	</div>
 
-	<div class="slide step" data-x="11700" data-y="1400" data-exclude="true">
+	<div class="slide step high-code" data-x="11700" data-y="1400">
+<pre>
+<em><span class="PreProc">function</span> set_post_thumbnail<span class="Special">(</span> <span class="Statement">$</span><span class="Identifier">post</span>, <span class="Statement">$</span><span class="Identifier">thumbnail_id</span> <span class="Special">)</span> <span class="Special">{</span></em>
+    <span class="Statement">$</span><span class="Identifier">post</span> <span class="Statement">=</span> get_post<span class="Special">(</span> <span class="Statement">$</span><span class="Identifier">post</span> <span class="Special">)</span>;
+    <span class="Statement">$</span><span class="Identifier">thumbnail_id</span> <span class="Statement">=</span> absint<span class="Special">(</span> <span class="Statement">$</span><span class="Identifier">thumbnail_id</span> <span class="Special">)</span>;
+
+    <span class="Statement">if</span> <span class="Special">(</span> <span class="Statement">!</span><span class="Statement">$</span><span class="Identifier">post</span> <span class="Statement">||</span> <span class="Statement">!</span><span class="Statement">$</span><span class="Identifier">thumbnail_id</span> <span class="Statement">||</span> <span class="Statement">!</span>get_post<span class="Special">(</span> <span class="Statement">$</span><span class="Identifier">thumbnail_id</span> <span class="Special">)</span> <span class="Special">)</span> <span class="Special">{</span>
+        <span class="Statement">return</span> <span class="Constant">false</span>;
+    <span class="Special">}</span>
+
+    <span class="Statement">$</span><span class="Identifier">thumbnail_html</span> <span class="Statement">=</span> wp_get_attachment_image<span class="Special">(</span> <span class="Statement">$</span><span class="Identifier">thumbnail_id</span>, '<span class="Constant">thumbnail</span>' <span class="Special">)</span>;
+    <span class="Statement">if</span> <span class="Special">(</span> <span class="Statement">empty</span><span class="Special">(</span> <span class="Statement">$</span><span class="Identifier">thumbnail_html</span> <span class="Special">)</span> <span class="Special">)</span> <span class="Special">{</span>
+        <span class="Statement">return</span> <span class="Constant">false</span>;
+    <span class="Special">}</span>
+
+<em>    <span class="Statement">return</span> update_post_meta<span class="Special">(</span> <span class="Statement">$</span><span class="Identifier">post</span><span class="Type">-&gt;</span>ID, '<span class="Constant">_thumbnail_id</span>', <span class="Statement">$</span><span class="Identifier">thumbnail_id</span> <span class="Special">)</span>;</em>
+<span class="Special">}</span>
+</pre>
 		&nbsp;
 	</div>
 
-	<div class="slide step" data-x="12600" data-y="1400" data-exclude="true">
-		&nbsp;
+	<div class="slide step" data-x="12600" data-y="1400">
+		<h2>1. Do not overstate</h2>
 	</div>
 
 	<div class="slide step half" data-x="11475" data-y="2100" data-exclude="true">
@@ -169,8 +238,21 @@
 
 	<!-- B -->
 
-	<div class="slide step" data-x="14400" data-y="0" data-exclude="true">
-		&nbsp;
+	<div class="slide step" data-x="14400" data-y="0">
+<pre>
+<span class="Special">&lt;?php</span>
+<span class="Type">class</span> WP_Customize_Color_Control <span class="Type">extends</span> WP_Customize_Control <span class="Special">{</span>
+
+    …
+
+    <span class="Comment">/**</span>
+<span class="Comment">     * @access public</span>
+<span class="Comment">     * @var string</span>
+<span class="Comment">     */</span>
+    <span class="Type">public</span> <span class="Statement">$</span><span class="Identifier">type</span> <span class="Statement">=</span> '<span class="Constant">color</span>';
+
+    …
+</pre>
 	</div>
 
 	<div class="slide step half" data-x="15075" data-y="0" data-exclude="true">
@@ -189,8 +271,25 @@
 		&nbsp;
 	</div>
 
-	<div class="slide step" data-x="14850" data-y="1050" data-exclude="true">
-		&nbsp;
+	<div class="slide step" data-x="14850" data-y="1050">
+<pre>
+<span class="Special">&lt;?php</span>
+<span class="Type">class</span> WP_Customize_Color_Control <span class="Type">extends</span> WP_Customize_Control <span class="Special">{</span>
+
+    …
+
+    <span class="Comment">/**</span>
+<span class="Comment">     * Enqueue control related scripts/styles.</span>
+<span class="Comment">     *</span>
+<span class="Comment">     * @since 3.4.0</span>
+<span class="Comment">     */</span>
+    <span class="Type">public</span> <span class="PreProc">function</span> enqueue<span class="Special">()</span> <span class="Special">{</span>
+        wp_enqueue_script<span class="Special">(</span> '<span class="Constant">farbtastic</span>' <span class="Special">)</span>;
+        wp_enqueue_style<span class="Special">(</span> '<span class="Constant">farbtastic</span>' <span class="Special">)</span>;
+    <span class="Special">}</span>
+
+    …
+</pre>
 	</div>
 	<div class="slide step half" data-x="15525" data-y="1050" data-exclude="true">
 		&nbsp;
@@ -238,8 +337,12 @@
 		&nbsp;
 	</div>
 
-	<div class="slide step" data-x="18000" data-y="2100" data-exclude="true">
-		&nbsp;
+	<div class="slide step" data-x="18000" data-y="2100">
+<pre>
+<span class="Comment">// don't bother setting up smilies if they are disabled</span>
+<span class="Statement">if</span> <span class="Special">(</span> <span class="Statement">!</span>get_option<span class="Special">(</span> '<span class="Constant">use_smilies</span>' <span class="Special">)</span> <span class="Special">)</span>
+    <span class="Statement">return</span>;
+</pre>
 	</div>
 
 
@@ -273,8 +376,8 @@
 		&nbsp;
 	</div>
 
-	<div class="slide step" data-x="20700" data-y="2100" data-exclude="true">
-		&nbsp;
+	<div class="slide step" data-x="20700" data-y="2100">
+		<q>When you overstate, readers will be instantly on guard</q>
 	</div>
 
 	<!-- T -->
@@ -308,8 +411,8 @@
 		&nbsp;
 	</div>
 
-	<div class="slide step" data-x="0" data-y="4200" data-exclude="true">
-		&nbsp;
+	<div class="slide step" data-x="0" data-y="4200">
+		<h2>2. Express co-ordinate ideas in similar form</h2>
 	</div>
 
 	<div class="slide step" data-x="900" data-y="4200" data-exclude="true">
@@ -330,8 +433,8 @@
 		&nbsp;
 	</div>
 
-	<div class="slide step" data-x="3600" data-y="3500" data-exclude="true">
-		&nbsp;
+	<div class="slide step" data-x="3600" data-y="3500">
+		<q>The likeness of form enables the reader to recongnize more readily the likeness of content and function</q>
 	</div>
 
 	<div class="slide step half" data-x="2475" data-y="4200" data-exclude="true">
@@ -384,8 +487,18 @@
 		&nbsp;
 	</div>
 
-	<div class="slide step" data-x="5400" data-y="5600" data-exclude="true">
-		&nbsp;
+	<div class="slide step" data-x="5400" data-y="5600">
+<pre>
+<span class="PreProc">function</span> wp_insert_link<span class="Special">(</span> <span class="Statement">$</span><span class="Identifier">linkdata</span>, <span class="Statement">$</span><span class="Identifier">wp_error</span> <span class="Statement">=</span> <span class="Constant">false</span> <span class="Special">)</span>
+
+<span class="PreProc">function</span> wp_insert_category<span class="Special">(</span> <span class="Statement">$</span><span class="Identifier">catarr</span>, <span class="Statement">$</span><span class="Identifier">wp_error</span> <span class="Statement">=</span> <span class="Constant">false</span> <span class="Special">)</span>
+
+<span class="PreProc">function</span> wp_insert_post<span class="Special">(</span> <span class="Statement">$</span><span class="Identifier">postarr</span>, <span class="Statement">$</span><span class="Identifier">wp_error</span> <span class="Statement">=</span> <span class="Constant">false</span> <span class="Special">)</span>
+
+…
+
+<span class="PreProc">function</span> wp_insert_<strong>something</strong><span class="Special">(</span> <span class="Statement">$</span><span class="Identifier">somethingarr</span>, <span class="Statement">$</span><span class="Identifier">wp_error</span> <span class="Statement">=</span> <span class="Constant">false</span> <span class="Special">)</span>
+</pre>
 	</div>
 
 	<div class="slide step" data-x="6300" data-y="5600" data-exclude="true">
@@ -395,12 +508,17 @@
 
 	<!-- R -->
 
-	<div class="slide step" data-x="8100" data-y="3500" data-exclude="true">
-		&nbsp;
+	<div class="slide step" data-x="8100" data-y="3500">
+		<h2>Expectations: set</h2>
 	</div>
 
-	<div class="slide step" data-x="9000" data-y="3500" data-exclude="true">
-		&nbsp;
+	<div class="slide step" data-x="9000" data-y="3500">
+<pre>
+<span class="Comment">/**</span>
+<span class="Comment"> * <strong>Updates</strong> an existing Category or creates a new Category.</span>
+<span class="Comment"> */</span>
+<span class="PreProc">function</span> wp_insert_category<span class="Special">(</span> <span class="Statement">$</span><span class="Identifier">catarr</span>, <span class="Statement">$</span><span class="Identifier">wp_error</span> <span class="Statement">=</span> <span class="Constant">false</span> <span class="Special">)</span>
+</pre>
 	</div>
 
 	<div class="slide step half" data-x="7875" data-y="4200" data-exclude="true">
@@ -411,12 +529,18 @@
 		&nbsp;
 	</div>
 
-	<div class="slide step" data-x="8100" data-y="4900" data-exclude="true">
-		&nbsp;
+	<div class="slide step" data-x="8100" data-y="4900">
+<pre>
+<span class="PreProc">function</span> wp_insert_comment<span class="Special">(</span> <span class="Statement">$</span><span class="Identifier">commentdata</span> <span class="Special">)</span>
+
+<span class="PreProc">function</span> wp_insert_term<span class="Special">(</span> <span class="Statement">$</span><span class="Identifier">term</span>, <span class="Statement">$</span><span class="Identifier">taxonomy</span>, <span class="Statement">$</span><span class="Identifier">args</span> <span class="Statement">=</span> <span class="Type">array</span><span class="Special">()</span> <span class="Special">)</span>
+
+<span class="PreProc">function</span> wp_insert_attachment<span class="Special">(</span> <span class="Statement">$</span><span class="Identifier">object</span>, <span class="Statement">$</span><span class="Identifier">file</span> <span class="Statement">=</span> <span class="Constant">false</span>, <span class="Statement">$</span><span class="Identifier">parent</span> <span class="Statement">=</span> <span class="Constant">0</span> <span class="Special">)</span>
+</pre>
 	</div>
 
-	<div class="slide step" data-x="9000" data-y="4900" data-exclude="true">
-		&nbsp;
+	<div class="slide step" data-x="9000" data-y="4900">
+		<q>Happiness is just<br />managing expectations</q>
 	</div>
 
 	<div class="slide step half" data-x="7875" data-y="5600" data-exclude="true">
@@ -430,15 +554,15 @@
 	<!-- C -->
 
 	<div class="slide step" data-x="12600" data-y="3500">
-		<h1>baba</h1>
+		<h2>3. Make the paragraph the unit of composition</h2>
 	</div>
 
-	<div class="slide step" data-x="11700" data-y="4200" data-exclude="true" data-rotate="0">
-		&nbsp;
+	<div class="slide step" data-x="11700" data-y="4200" data-rotate="0">
+		<h2>3. Make the <strike>paragraph</strike><strong>function</strong> the unit of composition</h2>
 	</div>
 
-	<div class="slide step" data-x="11700" data-y="4900" data-exclude="true" data-rotate="0">
-		&nbsp;
+	<div class="slide step" data-x="11700" data-y="4900" data-rotate="0">
+		<q>After the paragraph<br />has been written, examine it to see whether division will improve&nbsp;it</q>
 	</div>
 
 	<div class="slide step" data-x="12600" data-y="5600" data-exclude="true">
@@ -447,12 +571,12 @@
 
 	<!-- R -->
 
-	<div class="slide step" data-x="14400" data-y="3500" data-exclude="true">
-		&nbsp;
+	<div class="slide step" data-x="14400" data-y="3500">
+		<q>After the <strike>paragraph</strike><strong>function</strong><br />has been written, examine it to see whether division will improve&nbsp;it</q>
 	</div>
 
-	<div class="slide step" data-x="15300" data-y="3500" data-exclude="true">
-		&nbsp;
+	<div class="slide step" data-x="15300" data-y="3500">
+		<q>Enormous blocks of print look formidable to readers, who are often reluctant to tackle them</q>
 	</div>
 
 	<div class="slide step half" data-x="14175" data-y="4200" data-exclude="true">
@@ -463,12 +587,12 @@
 		&nbsp;
 	</div>
 
-	<div class="slide step" data-x="14400" data-y="4900" data-exclude="true">
-		&nbsp;
+	<div class="slide step" data-x="14400" data-y="4900">
+		<q>Enormous blocks of <strong>code</strong> look formidable to readers, who are often reluctant to tackle them</q>
 	</div>
 
-	<div class="slide step" data-x="15300" data-y="4900" data-exclude="true">
-		&nbsp;
+	<div class="slide step" data-x="15300" data-y="4900">
+		<q>Paragraphing calls for a good eye as well as logical mind</q>
 	</div>
 
 	<div class="slide step half" data-x="14175" data-y="5600" data-exclude="true">
@@ -480,15 +604,15 @@
 	</div>
 
 	<!-- A -->
-	<div class="slide step" data-x="17100" data-y="3500" data-exclude="true">
-		&nbsp;
+	<div class="slide step" data-x="17100" data-y="3500">
+		<q><strong>Functioning</strong> calls for a good eye as well as logical mind</q>
 	</div>
 
-	<div class="slide step" data-x="18000" data-y="3500" data-exclude="true">
-		&nbsp;
+	<div class="slide step" data-x="18000" data-y="3500">
+		<h2>You will find more<br /><strong>examples</strong></h2>
 	</div>
 
-	<div class="slide step half" data-x="16875" data-y="4200" data-exclude="true">
+	<div class="slide step half" data-x="16876" data-y="4200" data-exclude="true">
 		&nbsp;
 	</div>
 
@@ -496,12 +620,12 @@
 		&nbsp;
 	</div>
 
-	<div class="slide step" data-x="17100" data-y="4900" data-exclude="true">
-		&nbsp;
+	<div class="slide step" data-x="17100" data-y="4900">
+		<h2>You will find more<br /><strong>analogies</strong></h2>
 	</div>
 
-	<div class="slide step" data-x="18000" data-y="4900" data-exclude="true">
-		&nbsp;
+	<div class="slide step" data-x="18000" data-y="4900">
+		<h2>You will find more<br /><strong>ways to become a better programmer</strong></h2>
 	</div>
 
 	<div class="slide step half" data-x="16875" data-y="5600" data-exclude="true">
@@ -512,9 +636,13 @@
 		&nbsp;
 	</div>
 
+
+	<div id="o" class="step" data-x="12000" data-y="3500" data-scale="28" data-transition-duration="5000">
+	</div>
+
 	<!-- F -->
-	<div class="slide step" data-x="19800" data-y="3500" data-exclude="true">
-		&nbsp;
+	<div id="q" class="slide step" data-x="19800" data-y="3500">
+		<h1>?</h1>
 	</div>
 
 	<div class="slide step" data-x="20700" data-y="3500" data-exclude="true">
@@ -559,8 +687,6 @@
 	</div>
 
 
-	<div id="o" class="step" data-x="12000" data-y="3500" data-scale="28">
-	</div>
 </div>
 
 <script src="./impress.js"></script>
